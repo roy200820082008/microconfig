@@ -1,16 +1,20 @@
+server:
+  port: 7001
 spring:
-  profiles:
+  profiles: erueka
     active: 
     - dev
 ---
-
+server:
+  port: 8001
 spring:
   profiles: dev
   application:
-    name: microconfif-test-dev
+    name: microconfig-test-dev
 ---
-
+server:
+  port: 8080
 spring:
   profiles: default
   application:
-    name: microconfif-test-default 
+    name: microconfig-test-default
