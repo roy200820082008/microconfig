@@ -3,11 +3,11 @@ server:
 spring:
   profiles: dev
   application:
-    name: microconfig-test-dev
+    name: aaaa
 ---
 server:
   port: 8080
 spring:
   profiles: default
   application:
-    name: microconfig-test-default
+    name: bbbb
