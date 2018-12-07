@@ -1,11 +1,4 @@
 server:
-  port: 7001
-spring:
-  profiles: erueka
-    active: 
-    - dev
----
-server:
   port: 8001
 spring:
   profiles: dev
