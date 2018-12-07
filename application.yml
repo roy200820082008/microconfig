@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: 
+    - dev
+---
+
+spring:
+  profiles: dev
+  application:
+    name: microconfif-test-dev
+---
+
+spring:
+  profiles: default
+  application:
+    name: microconfif-test-default 
