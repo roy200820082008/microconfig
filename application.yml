@@ -17,7 +17,7 @@ server:
 spring:
   profiles: default
   application:
-    name: bbbb
+    name: dddd
 ---
 server:
   port: 8888
