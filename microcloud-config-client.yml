@@ -13,7 +13,7 @@ mybatis:
 spring:
   profiles: dev
   application: 
-    name: microcloud-config-client
+    name: roy200920092009
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    # 配置当前要使用的数据源的操作类型
     driver-class-name: org.gjt.mm.mysql.Driver      # 配置MySQL的驱动程序类
@@ -49,7 +49,7 @@ mybatis:
 spring:
   profiles: beta
   application: 
-    name: microcloud-config-client
+    name: roy200920092009
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    # 配置当前要使用的数据源的操作类型
     driver-class-name: org.gjt.mm.mysql.Driver      # 配置MySQL的驱动程序类
