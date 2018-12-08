@@ -6,7 +6,7 @@ mybatis:
   mapper-locations:                                     # 所有的mapper映射文件
   - classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: dev01
+  profiles: dev
   application:
     name: roy200920092009
   datasource:
@@ -46,7 +46,7 @@ mybatis:
   mapper-locations:                                     # 所有的mapper映射文件
   - classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: dev02
+  profiles: beta
   application:
     name: roy200920092009
   datasource:
