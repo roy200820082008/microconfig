@@ -1,4 +1,4 @@
-spring:
+ï»¿spring:
   profiles:
     active:
     - dev
@@ -10,24 +10,24 @@ spring:
   application: 
     name: microcloud-config-client
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource    # ÅäÖÃµ±Ç°ÒªÊ¹ÓÃµÄÊı¾İÔ´µÄ²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver      # ÅäÖÃMySQLµÄÇı¶¯³ÌĞòÀà
-    url: jdbc:mysql://192.168.68.244:3306/mldn8001           # Êı¾İ¿âÁ¬½ÓµØÖ·
-    username: root                                  # Êı¾İ¿âÓÃ»§Ãû
-    password: root                            # Êı¾İ¿âÁ¬½ÓÃÜÂë
-    dbcp2:                                          # ½øĞĞÊı¾İ¿âÁ¬½Ó³ØµÄÅäÖÃ
-      min-idle: 5                                   # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı    
-      initial-size: 5                               # ³õÊ¼»¯Ìá¹©µÄÁ¬½ÓÊı
-      max-total: 5                                  # ×î´óµÄÁ¬½ÓÊı
-      max-wait-millis: 200                          # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä 
+    type: com.alibaba.druid.pool.DruidDataSource    # é…ç½®å½“å‰è¦ä½¿ç”¨çš„æ•°æ®æºçš„æ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver      # é…ç½®MySQLçš„é©±åŠ¨ç¨‹åºç±»
+    url: jdbc:mysql://192.168.68.244:3306/mldn8001           # æ•°æ®åº“è¿æ¥åœ°å€
+    username: root                                  # æ•°æ®åº“ç”¨æˆ·å
+    password: root                            # æ•°æ®åº“è¿æ¥å¯†ç 
+    dbcp2:                                          # è¿›è¡Œæ•°æ®åº“è¿æ¥æ± çš„é…ç½®
+      min-idle: 5                                   # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°    
+      initial-size: 5                               # åˆå§‹åŒ–æä¾›çš„è¿æ¥æ•°
+      max-total: 5                                  # æœ€å¤§çš„è¿æ¥æ•°
+      max-wait-millis: 200                          # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´ 
 eureka: 
   client:
     service-url:
       defaultZone: http://edmin:mldnjava@eureka-7001.com:7001/eureka,http://edmin:mldnjava@eureka-7002.com:7002/eureka,http://edmin:mldnjava@eureka-7003.com:7003/eureka
-  instance: # eureakÊµÀıÅäÖÃ
-    #´ËÊµÀı×¢²áµ½eureka·şÎñ¶ËµÄÎ¨Ò»±êÊ¶,Æä×é³ÉÎª${spring.application.name}:${spring.application.instance_id:${random.value}}
+  instance: # eureakå®ä¾‹é…ç½®
+    #æ­¤å®ä¾‹æ³¨å†Œåˆ°eurekaæœåŠ¡ç«¯çš„å”¯ä¸€æ ‡è¯†,å…¶ç»„æˆä¸º${spring.application.name}:${spring.application.instance_id:${random.value}}
     instance-id: 8201_local
-    prefer-ip-address: true #ÒÔIPµØÖ·×¢²áµ½·şÎñÖĞĞÄ£¬Ïà»¥×¢²áÊ¹ÓÃIPµØÖ·
+    prefer-ip-address: true #ä»¥IPåœ°å€æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒï¼Œç›¸äº’æ³¨å†Œä½¿ç”¨IPåœ°å€
 info:
   app.name: mldn-microcloud
   company.name: www.mldn.cn
@@ -41,24 +41,24 @@ spring:
   application: 
     name: microcloud-config-client
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource    # ÅäÖÃµ±Ç°ÒªÊ¹ÓÃµÄÊı¾İÔ´µÄ²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver      # ÅäÖÃMySQLµÄÇı¶¯³ÌĞòÀà
-    url: jdbc:mysql://192.168.68.244:3306/mldn8001           # Êı¾İ¿âÁ¬½ÓµØÖ·
-    username: root                                  # Êı¾İ¿âÓÃ»§Ãû
-    password: root                            # Êı¾İ¿âÁ¬½ÓÃÜÂë
-    dbcp2:                                          # ½øĞĞÊı¾İ¿âÁ¬½Ó³ØµÄÅäÖÃ
-      min-idle: 5                                   # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı    
-      initial-size: 5                               # ³õÊ¼»¯Ìá¹©µÄÁ¬½ÓÊı
-      max-total: 5                                  # ×î´óµÄÁ¬½ÓÊı
-      max-wait-millis: 200                          # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä 
+    type: com.alibaba.druid.pool.DruidDataSource    # é…ç½®å½“å‰è¦ä½¿ç”¨çš„æ•°æ®æºçš„æ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver      # é…ç½®MySQLçš„é©±åŠ¨ç¨‹åºç±»
+    url: jdbc:mysql://192.168.68.244:3306/mldn8001           # æ•°æ®åº“è¿æ¥åœ°å€
+    username: root                                  # æ•°æ®åº“ç”¨æˆ·å
+    password: root                            # æ•°æ®åº“è¿æ¥å¯†ç 
+    dbcp2:                                          # è¿›è¡Œæ•°æ®åº“è¿æ¥æ± çš„é…ç½®
+      min-idle: 5                                   # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°    
+      initial-size: 5                               # åˆå§‹åŒ–æä¾›çš„è¿æ¥æ•°
+      max-total: 5                                  # æœ€å¤§çš„è¿æ¥æ•°
+      max-wait-millis: 200                          # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´ 
 eureka: 
   client:
     service-url:
       defaultZone: http://edmin:mldnjava@eureka-7001.com:7001/eureka,http://edmin:mldnjava@eureka-7002.com:7002/eureka,http://edmin:mldnjava@eureka-7003.com:7003/eureka
-  instance: # eureakÊµÀıÅäÖÃ
-    #´ËÊµÀı×¢²áµ½eureka·şÎñ¶ËµÄÎ¨Ò»±êÊ¶,Æä×é³ÉÎª${spring.application.name}:${spring.application.instance_id:${random.value}}
+  instance: # eureakå®ä¾‹é…ç½®
+    #æ­¤å®ä¾‹æ³¨å†Œåˆ°eurekaæœåŠ¡ç«¯çš„å”¯ä¸€æ ‡è¯†,å…¶ç»„æˆä¸º${spring.application.name}:${spring.application.instance_id:${random.value}}
     instance-id: 8102_local
-    prefer-ip-address: true #ÒÔIPµØÖ·×¢²áµ½·şÎñÖĞĞÄ£¬Ïà»¥×¢²áÊ¹ÓÃIPµØÖ·
+    prefer-ip-address: true #ä»¥IPåœ°å€æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒï¼Œç›¸äº’æ³¨å†Œä½¿ç”¨IPåœ°å€
 info:
   app.name: mldn-microcloud
   company.name: www.mldn.cn
