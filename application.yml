@@ -1,4 +1,4 @@
-server:
+ï»¿server:
   port: 8001
 spring:
   profiles: dev
@@ -8,36 +8,36 @@ spring:
 server:
   port: 8201
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-  type-aliases-package: cn.mldn.vo            # ¶¨ÒåËùÓĞ²Ù×÷ÀàµÄ±ğÃûËùÔÚ°ü
-  mapper-locations:                                     # ËùÓĞµÄmapperÓ³ÉäÎÄ¼ş
+  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+  type-aliases-package: cn.mldn.vo            # å®šä¹‰æ‰€æœ‰æ“ä½œç±»çš„åˆ«åæ‰€åœ¨åŒ…
+  mapper-locations:                                     # æ‰€æœ‰çš„mapperæ˜ å°„æ–‡ä»¶
   - classpath:mybatis/mapper/**/*.xml
 spring:
   profiles: dev01
   application:
     name: roy200920092009
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource    # ÅäÖÃµ±Ç°ÒªÊ¹ÓÃµÄÊı¾İÔ´µÄ²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver      # ÅäÖÃMySQLµÄÇı¶¯³ÌĞòÀà
-    url: jdbc:mysql://192.168.68.244:3306/mldn8001           # Êı¾İ¿âÁ¬½ÓµØÖ·
-    username: root                                  # Êı¾İ¿âÓÃ»§Ãû
-    password: root                            # Êı¾İ¿âÁ¬½ÓÃÜÂë
-    dbcp2:                                          # ½øĞĞÊı¾İ¿âÁ¬½Ó³ØµÄÅäÖÃ
-      min-idle: 5                                   # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı    
-      initial-size: 5                               # ³õÊ¼»¯Ìá¹©µÄÁ¬½ÓÊı
-      max-total: 5                                  # ×î´óµÄÁ¬½ÓÊı
-      max-wait-millis: 200                          # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+    type: com.alibaba.druid.pool.DruidDataSource    # é…ç½®å½“å‰è¦ä½¿ç”¨çš„æ•°æ®æºçš„æ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver      # é…ç½®MySQLçš„é©±åŠ¨ç¨‹åºç±»
+    url: jdbc:mysql://192.168.68.244:3306/mldn8001           # æ•°æ®åº“è¿æ¥åœ°å€
+    username: root                                  # æ•°æ®åº“ç”¨æˆ·å
+    password: root                            # æ•°æ®åº“è¿æ¥å¯†ç 
+    dbcp2:                                          # è¿›è¡Œæ•°æ®åº“è¿æ¥æ± çš„é…ç½®
+      min-idle: 5                                   # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°    
+      initial-size: 5                               # åˆå§‹åŒ–æä¾›çš„è¿æ¥æ•°
+      max-total: 5                                  # æœ€å¤§çš„è¿æ¥æ•°
+      max-wait-millis: 200                          # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 eureka:
   client:
     service-url:
-      #Eureka·şÎñÆ÷µÄÁ¬½Ó£¬Ä¬ÈÏÎªhttp£º//XXXX£ºX/eureka/
+      #EurekaæœåŠ¡å™¨çš„è¿æ¥ï¼Œé»˜è®¤ä¸ºhttpï¼š//XXXXï¼šX/eureka/
       defaultZone: http://edmin:mldnjava@eureka-7001.com:7001/eureka,http://edmin:mldnjava@eureka-7002.com:7002/eureka,http://edmin:mldnjava@eureka-7003.com:7003/eureka
-  instance: # eureakÊµÀıÅäÖÃ
-    #´ËÊµÀı×¢²áµ½eureka·şÎñ¶ËµÄÎ¨Ò»±êÊ¶,Æä×é³ÉÎª${spring.application.name}:${spring.application.instance_id:${random.value}}
+  instance: # eureakå®ä¾‹é…ç½®
+    #æ­¤å®ä¾‹æ³¨å†Œåˆ°eurekaæœåŠ¡ç«¯çš„å”¯ä¸€æ ‡è¯†,å…¶ç»„æˆä¸º${spring.application.name}:${spring.application.instance_id:${random.value}}
     instance-id: microcloud-provider-dept-8201
-    prefer-ip-address: true #ÒÔIPµØÖ·×¢²áµ½·şÎñÖĞĞÄ£¬Ïà»¥×¢²áÊ¹ÓÃIPµØÖ·
-    #lease-renewal-interval-in-seconds: 2     #ÉèÖÃĞÄÌøµÄÊ±¼ä¼ä¸ôÎª2Ãë£¨Ä¬ÈÏÊÇ30Ãë£©
-    #lease-expiration-duration-in-seconds: 5  #Èç¹ûÏÖÔÚ³¬¹ıÁË5Ãë¼ä¸ôÃ»·¢ÏÖÕâ¸ö·şÎñ£¬ËµÃ÷Õâ¸ö·şÎñ¹ÒµôÁË£¨Ä¬ÈÏÊÇ90Ãë£©
+    prefer-ip-address: true #ä»¥IPåœ°å€æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒï¼Œç›¸äº’æ³¨å†Œä½¿ç”¨IPåœ°å€
+    #lease-renewal-interval-in-seconds: 2     #è®¾ç½®å¿ƒè·³çš„æ—¶é—´é—´éš”ä¸º2ç§’ï¼ˆé»˜è®¤æ˜¯30ç§’ï¼‰
+    #lease-expiration-duration-in-seconds: 5  #å¦‚æœç°åœ¨è¶…è¿‡äº†5ç§’é—´éš”æ²¡å‘ç°è¿™ä¸ªæœåŠ¡ï¼Œè¯´æ˜è¿™ä¸ªæœåŠ¡æŒ‚æ‰äº†ï¼ˆé»˜è®¤æ˜¯90ç§’ï¼‰
 info:
   app.name: mldn-microcloud
   company.name: www.mldn.cn
@@ -48,36 +48,36 @@ info:
 server:
   port: 8202
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-  type-aliases-package: cn.mldn.vo            # ¶¨ÒåËùÓĞ²Ù×÷ÀàµÄ±ğÃûËùÔÚ°ü
-  mapper-locations:                                     # ËùÓĞµÄmapperÓ³ÉäÎÄ¼ş
+  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+  type-aliases-package: cn.mldn.vo            # å®šä¹‰æ‰€æœ‰æ“ä½œç±»çš„åˆ«åæ‰€åœ¨åŒ…
+  mapper-locations:                                     # æ‰€æœ‰çš„mapperæ˜ å°„æ–‡ä»¶
   - classpath:mybatis/mapper/**/*.xml
 spring:
   profiles: dev02
   application:
     name: roy200920092009
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource    # ÅäÖÃµ±Ç°ÒªÊ¹ÓÃµÄÊı¾İÔ´µÄ²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver      # ÅäÖÃMySQLµÄÇı¶¯³ÌĞòÀà
-    url: jdbc:mysql://192.168.68.244:3306/mldn8001           # Êı¾İ¿âÁ¬½ÓµØÖ·
-    username: root                                  # Êı¾İ¿âÓÃ»§Ãû
-    password: root                            # Êı¾İ¿âÁ¬½ÓÃÜÂë
-    dbcp2:                                          # ½øĞĞÊı¾İ¿âÁ¬½Ó³ØµÄÅäÖÃ
-      min-idle: 5                                   # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı    
-      initial-size: 5                               # ³õÊ¼»¯Ìá¹©µÄÁ¬½ÓÊı
-      max-total: 5                                  # ×î´óµÄÁ¬½ÓÊı
-      max-wait-millis: 200                          # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+    type: com.alibaba.druid.pool.DruidDataSource    # é…ç½®å½“å‰è¦ä½¿ç”¨çš„æ•°æ®æºçš„æ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver      # é…ç½®MySQLçš„é©±åŠ¨ç¨‹åºç±»
+    url: jdbc:mysql://192.168.68.244:3306/mldn8001           # æ•°æ®åº“è¿æ¥åœ°å€
+    username: root                                  # æ•°æ®åº“ç”¨æˆ·å
+    password: root                            # æ•°æ®åº“è¿æ¥å¯†ç 
+    dbcp2:                                          # è¿›è¡Œæ•°æ®åº“è¿æ¥æ± çš„é…ç½®
+      min-idle: 5                                   # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°    
+      initial-size: 5                               # åˆå§‹åŒ–æä¾›çš„è¿æ¥æ•°
+      max-total: 5                                  # æœ€å¤§çš„è¿æ¥æ•°
+      max-wait-millis: 200                          # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 eureka:
   client:
     service-url:
-      #Eureka·şÎñÆ÷µÄÁ¬½Ó£¬Ä¬ÈÏÎªhttp£º//XXXX£ºX/eureka/
+      #EurekaæœåŠ¡å™¨çš„è¿æ¥ï¼Œé»˜è®¤ä¸ºhttpï¼š//XXXXï¼šX/eureka/
       defaultZone: http://edmin:mldnjava@eureka-7001.com:7001/eureka,http://edmin:mldnjava@eureka-7002.com:7002/eureka,http://edmin:mldnjava@eureka-7003.com:7003/eureka
-  instance: # eureakÊµÀıÅäÖÃ
-    #´ËÊµÀı×¢²áµ½eureka·şÎñ¶ËµÄÎ¨Ò»±êÊ¶,Æä×é³ÉÎª${spring.application.name}:${spring.application.instance_id:${random.value}}
+  instance: # eureakå®ä¾‹é…ç½®
+    #æ­¤å®ä¾‹æ³¨å†Œåˆ°eurekaæœåŠ¡ç«¯çš„å”¯ä¸€æ ‡è¯†,å…¶ç»„æˆä¸º${spring.application.name}:${spring.application.instance_id:${random.value}}
     instance-id: microcloud-provider-dept-8201
-    prefer-ip-address: true #ÒÔIPµØÖ·×¢²áµ½·şÎñÖĞĞÄ£¬Ïà»¥×¢²áÊ¹ÓÃIPµØÖ·
-    #lease-renewal-interval-in-seconds: 2     #ÉèÖÃĞÄÌøµÄÊ±¼ä¼ä¸ôÎª2Ãë£¨Ä¬ÈÏÊÇ30Ãë£©
-    #lease-expiration-duration-in-seconds: 5  #Èç¹ûÏÖÔÚ³¬¹ıÁË5Ãë¼ä¸ôÃ»·¢ÏÖÕâ¸ö·şÎñ£¬ËµÃ÷Õâ¸ö·şÎñ¹ÒµôÁË£¨Ä¬ÈÏÊÇ90Ãë£©
+    prefer-ip-address: true #ä»¥IPåœ°å€æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒï¼Œç›¸äº’æ³¨å†Œä½¿ç”¨IPåœ°å€
+    #lease-renewal-interval-in-seconds: 2     #è®¾ç½®å¿ƒè·³çš„æ—¶é—´é—´éš”ä¸º2ç§’ï¼ˆé»˜è®¤æ˜¯30ç§’ï¼‰
+    #lease-expiration-duration-in-seconds: 5  #å¦‚æœç°åœ¨è¶…è¿‡äº†5ç§’é—´éš”æ²¡å‘ç°è¿™ä¸ªæœåŠ¡ï¼Œè¯´æ˜è¿™ä¸ªæœåŠ¡æŒ‚æ‰äº†ï¼ˆé»˜è®¤æ˜¯90ç§’ï¼‰
 info:
   app.name: mldn-microcloud
   company.name: www.mldn.cn
