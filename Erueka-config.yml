@@ -1,24 +1,24 @@
-server:
+ï»¿server:
   port: 7001
 spring:
   profiles: erueka_7001
 security:
   basic:
-    enabled: true #ÆôÓÃ°²È«ÈÏÖ¤
+    enabled: true #å¯ç”¨å®‰å…¨è®¤è¯
   user:
-    name: edmin  #ÓÃ»§Ãû
-    password: mldnjava #ÃÜÂë  
+    name: edmin  #ç”¨æˆ·å
+    password: mldnjava #å¯†ç   
 eureka:
   server:
-    #eviction-interval-timer-in-ms: 1000 #ÉèÖÃÇåÀíµÄÊ±¼ä¼ä¸ô£¨µ¥Î»ºÁÃë£¬Ä¬ÈÏÊÇ60Ãë£©
-    enable-self-preservation: false # ÉèÖÃÎªfalse±íÊ¾¹Ø±Õ±£»¤Ä£Ê½
-  instance: # eureakÊµÀıÅäÖÃ
-    hostname: eureka-7001.com # ¶¨ÒåEurekaÊµÀıËùÔÚµÄÖ÷»úÃû³Æ
+    #eviction-interval-timer-in-ms: 1000 #è®¾ç½®æ¸…ç†çš„æ—¶é—´é—´éš”ï¼ˆå•ä½æ¯«ç§’ï¼Œé»˜è®¤æ˜¯60ç§’ï¼‰
+    enable-self-preservation: false # è®¾ç½®ä¸ºfalseè¡¨ç¤ºå…³é—­ä¿æŠ¤æ¨¡å¼
+  instance: # eureakå®ä¾‹é…ç½®
+    hostname: eureka-7001.com # å®šä¹‰Eurekaå®ä¾‹æ‰€åœ¨çš„ä¸»æœºåç§°
     instance-id: 127.0.0.1:${server.port}
-    prefer-ip-address: true # ÒÔIPµØÖ·×¢²áµ½·şÎñÖĞĞÄ£¬Ïà»¥×¢²áÊ¹ÓÃIPµØÖ·
+    prefer-ip-address: true # ä»¥IPåœ°å€æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒï¼Œç›¸äº’æ³¨å†Œä½¿ç”¨IPåœ°å€
   client:
     service-url:
-      # Eureka·şÎñÆ÷µÄÁ¬½Ó£¬Ä¬ÈÏÎªhttp£º//XXXX£ºX/eureka/
+      # EurekaæœåŠ¡å™¨çš„è¿æ¥ï¼Œé»˜è®¤ä¸ºhttpï¼š//XXXXï¼šX/eureka/
       defaultZone: http://edmin:mldnjava@eureka-7002.com:7002/eureka,http://edmin:mldnjava@eureka-7003.com:7003/eureka
     register-with-eureka: false
     fetch-registry: false
@@ -31,21 +31,21 @@ spring:
   profiles: erueka_7002
 security:
   basic:
-    enabled: true #ÆôÓÃ°²È«ÈÏÖ¤
+    enabled: true #å¯ç”¨å®‰å…¨è®¤è¯
   user:
-    name: edmin  #ÓÃ»§Ãû
-    password: mldnjava #ÃÜÂë  
+    name: edmin  #ç”¨æˆ·å
+    password: mldnjava #å¯†ç   
 eureka:
   server:
-    #eviction-interval-timer-in-ms: 1000 #ÉèÖÃÇåÀíµÄÊ±¼ä¼ä¸ô£¨µ¥Î»ºÁÃë£¬Ä¬ÈÏÊÇ60Ãë£©
-    enable-self-preservation: false # ÉèÖÃÎªfalse±íÊ¾¹Ø±Õ±£»¤Ä£Ê½
-  instance: # eureakÊµÀıÅäÖÃ
-    hostname: eureka-7002.com # ¶¨ÒåEurekaÊµÀıËùÔÚµÄÖ÷»úÃû³Æ
+    #eviction-interval-timer-in-ms: 1000 #è®¾ç½®æ¸…ç†çš„æ—¶é—´é—´éš”ï¼ˆå•ä½æ¯«ç§’ï¼Œé»˜è®¤æ˜¯60ç§’ï¼‰
+    enable-self-preservation: false # è®¾ç½®ä¸ºfalseè¡¨ç¤ºå…³é—­ä¿æŠ¤æ¨¡å¼
+  instance: # eureakå®ä¾‹é…ç½®
+    hostname: eureka-7002.com # å®šä¹‰Eurekaå®ä¾‹æ‰€åœ¨çš„ä¸»æœºåç§°
     instance-id: 127.0.0.1:${server.port}
-    prefer-ip-address: true # ÒÔIPµØÖ·×¢²áµ½·şÎñÖĞĞÄ£¬Ïà»¥×¢²áÊ¹ÓÃIPµØÖ·
+    prefer-ip-address: true # ä»¥IPåœ°å€æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒï¼Œç›¸äº’æ³¨å†Œä½¿ç”¨IPåœ°å€
   client:
     service-url:
-      # Eureka·şÎñÆ÷µÄÁ¬½Ó£¬Ä¬ÈÏÎªhttp£º//XXXX£ºX/eureka/
+      # EurekaæœåŠ¡å™¨çš„è¿æ¥ï¼Œé»˜è®¤ä¸ºhttpï¼š//XXXXï¼šX/eureka/
       defaultZone: http://edmin:mldnjava@eureka-7001.com:7001/eureka,http://edmin:mldnjava@eureka-7003.com:7003/eureka
     register-with-eureka: false
     fetch-registry: false
@@ -58,21 +58,21 @@ spring:
   profiles: erueka_7003
 security:
   basic:
-    enabled: true #ÆôÓÃ°²È«ÈÏÖ¤
+    enabled: true #å¯ç”¨å®‰å…¨è®¤è¯
   user:
-    name: edmin  #ÓÃ»§Ãû
-    password: mldnjava #ÃÜÂë  
+    name: edmin  #ç”¨æˆ·å
+    password: mldnjava #å¯†ç   
 eureka:
   server:
-    #eviction-interval-timer-in-ms: 1000 #ÉèÖÃÇåÀíµÄÊ±¼ä¼ä¸ô£¨µ¥Î»ºÁÃë£¬Ä¬ÈÏÊÇ60Ãë£©
-    enable-self-preservation: false # ÉèÖÃÎªfalse±íÊ¾¹Ø±Õ±£»¤Ä£Ê½
-  instance: # eureakÊµÀıÅäÖÃ
-    hostname: eureka-7003.com # ¶¨ÒåEurekaÊµÀıËùÔÚµÄÖ÷»úÃû³Æ
+    #eviction-interval-timer-in-ms: 1000 #è®¾ç½®æ¸…ç†çš„æ—¶é—´é—´éš”ï¼ˆå•ä½æ¯«ç§’ï¼Œé»˜è®¤æ˜¯60ç§’ï¼‰
+    enable-self-preservation: false # è®¾ç½®ä¸ºfalseè¡¨ç¤ºå…³é—­ä¿æŠ¤æ¨¡å¼
+  instance: # eureakå®ä¾‹é…ç½®
+    hostname: eureka-7003.com # å®šä¹‰Eurekaå®ä¾‹æ‰€åœ¨çš„ä¸»æœºåç§°
     instance-id: 127.0.0.1:${server.port}
-    prefer-ip-address: true # ÒÔIPµØÖ·×¢²áµ½·şÎñÖĞĞÄ£¬Ïà»¥×¢²áÊ¹ÓÃIPµØÖ·
+    prefer-ip-address: true # ä»¥IPåœ°å€æ³¨å†Œåˆ°æœåŠ¡ä¸­å¿ƒï¼Œç›¸äº’æ³¨å†Œä½¿ç”¨IPåœ°å€
   client:
     service-url:
-      # Eureka·şÎñÆ÷µÄÁ¬½Ó£¬Ä¬ÈÏÎªhttp£º//XXXX£ºX/eureka/
+      # EurekaæœåŠ¡å™¨çš„è¿æ¥ï¼Œé»˜è®¤ä¸ºhttpï¼š//XXXXï¼šX/eureka/
       defaultZone: http://edmin:mldnjava@eureka-7001.com:7001/eureka,http://edmin:mldnjava@eureka-7002.com:7002/eureka
     register-with-eureka: false
     fetch-registry: false
