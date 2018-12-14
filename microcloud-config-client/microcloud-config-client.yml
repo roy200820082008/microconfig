@@ -11,7 +11,7 @@ mybatis:
   mapper-locations:                                     # 所有的mapper映射文件
   - classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: beta
+  profiles: dev
   application: 
     name: roy200920092009
   datasource:
@@ -28,7 +28,7 @@ spring:
 eureka: 
   client:
     service-url:
-      defaultZone: http://edmin:mldnjava@localhost:7001/eureka
+      defaultZone: http://edmin:mldnjava@eureka01:7001/eureka
   instance: # eureak实例配置
     #此实例注册到eureka服务端的唯一标识,其组成为${spring.application.name}:${spring.application.instance_id:${random.value}}
     instance-id: 8001_fwd
