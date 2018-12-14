@@ -11,7 +11,7 @@ mybatis:
   mapper-locations:                                     # 所有的mapper映射文件
   - classpath:mybatis/mapper/**/*.xml
 spring:
-  profiles: dev_8001
+  profiles: beta
   application: 
     name: roy200920092009
   datasource:
