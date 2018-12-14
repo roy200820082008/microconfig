@@ -64,7 +64,7 @@ spring:
 eureka: 
   client:
     service-url:
-      defaultZone: http://edmin:mldnjava@localhost:7001/eureka
+      defaultZone: http://edmin:mldnjava@192.168.68.133:7001/eureka,http://edmin:mldnjava@192.168.68.134:7002/eureka,http://edmin:mldnjava@192.168.68.138:7003/eureka
   instance: # eureak实例配置
     #此实例注册到eureka服务端的唯一标识,其组成为${spring.application.name}:${spring.application.instance_id:${random.value}}
     instance-id: 8002_fwd
